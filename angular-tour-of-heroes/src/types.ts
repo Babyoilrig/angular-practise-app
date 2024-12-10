@@ -25,6 +25,15 @@ export interface Products {
 
 }
 
+export interface Product {
+    price: string;
+    name: string;
+    image: string;
+    rating: number;
+
+
+}
+
 export interface PaginationParams {
     // [key: string]: string | number | boolean | ReadonlyArray<string | number | boolean>;
     page: number;
