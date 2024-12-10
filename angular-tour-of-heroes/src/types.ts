@@ -1,9 +1,10 @@
 import { HttpContext, HttpHeaders, HttpParams } from '@angular/common/http';
+
 export interface Options {
         headers?: HttpHeaders | {
             [header: string]: string | string[];
         };
-        observe: 'body';
+        observe?: 'body';
         context?: HttpContext;
         params?: HttpParams | {
             [param: string]: string | number | boolean | ReadonlyArray<string | number | boolean>;
@@ -35,7 +36,11 @@ export interface Product {
 }
 
 export interface PaginationParams {
-    // [key: string]: string | number | boolean | ReadonlyArray<string | number | boolean>;
+    [param: string]: 
+    | string 
+    | number 
+    | boolean 
+    | ReadonlyArray<string | number | boolean>;
     page: number;
     perPage: number;
 }
