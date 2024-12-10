@@ -16,12 +16,17 @@ export interface Options {
         } | boolean; 
 }
 
-export interface Product {
+export interface Products {
+    items: Product[];
+    total: number;
+    page: number;
+    perPage: number;
+    totalPages: number;
 
 }
 
 export interface PaginationParams {
-    [key: string]: string | number | boolean | ReadonlyArray<string | number | boolean>;
+    // [key: string]: string | number | boolean | ReadonlyArray<string | number | boolean>;
     page: number;
     perPage: number;
 }
