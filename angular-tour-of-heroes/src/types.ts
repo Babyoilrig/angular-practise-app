@@ -15,3 +15,13 @@ export interface Options {
             includeHeaders?: string[];
         } | boolean; 
 }
+
+export interface Product {
+
+}
+
+export interface PaginationParams {
+    [key: string]: string | number | boolean | ReadonlyArray<string | number | boolean>;
+    page: number;
+    perPage: number;
+}
