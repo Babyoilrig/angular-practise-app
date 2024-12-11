@@ -15,3 +15,23 @@ app-root {
     display: flex;
     flex-direction: column;
 }
+
+.row {
+    display: flex;
+    flex-direction: row;
+
+} 
+
+.column {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.mt-15 {
+    margin-top: 15px;
+}
+
+.mt-25{
+    margin-top: 125px;
+}
