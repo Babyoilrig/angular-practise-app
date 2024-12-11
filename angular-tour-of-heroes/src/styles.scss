@@ -63,3 +63,16 @@ app-root {
 .align-center {
     align-items: center;
 }
+
+.justify-center {
+    justify-content: center;
+}
+
+.full-center {
+    align-items: center;
+    justify-content: center;
+}
+
+.hidden {
+    display: none;
+}
