@@ -21,6 +21,7 @@ export class HomeComponent {
 products: Product[] = [];
 
 totalRecords: number = 0;
+rows: number = 5;
 
 onProductOutput(product: Product) {
   console.log(product, 'Output'); 
@@ -40,6 +41,6 @@ fetchProducts (page: number, perPage: number) {
   }
 
   ngOnInit() {
-    this.fetchProducts(0, 5);
+    this.fetchProducts(0, this.rows);
   }
 }
