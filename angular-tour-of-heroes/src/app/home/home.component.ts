@@ -20,8 +20,14 @@ export class HomeComponent {
 
 products: Product[] = [];
 
+totalRecords: number = 0;
+
 onProductOutput(product: Product) {
   console.log(product, 'Output'); 
+}
+
+onPageChange(event:any) {
+  this.fetchProducts(event.page, event.rows);
 }
 
 fetchProducts (page: number, perPage: number) {
@@ -29,6 +35,7 @@ fetchProducts (page: number, perPage: number) {
   .getProducts('http://localhost:3000/clothes', {page, perPage})
     .subscribe((products: Products) => {
       this.products = products.items;
+      this.totalRecords = products.total;
     });
   }
 
