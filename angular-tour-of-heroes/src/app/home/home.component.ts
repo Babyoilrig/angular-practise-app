@@ -8,7 +8,7 @@ import { PaginatorModule } from 'primeng/paginator';
 
 @Component({
   selector: 'app-home',
-  imports: [ProductComponent, PaginatorModule],
+  imports: [ProductComponent, PaginatorModule, CommonModule ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
