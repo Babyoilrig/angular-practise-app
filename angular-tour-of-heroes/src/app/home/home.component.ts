@@ -3,11 +3,12 @@ import { ProductsService } from '../services/products.service';
 import { Products, Product } from '../../types';
 import { ProductComponent } from '../components/product/product.component';
 import { CommonModule } from '@angular/common';
+import { PaginatorModule } from 'primeng/paginator';
 
 
 @Component({
   selector: 'app-home',
-  imports: [ProductComponent, CommonModule],
+  imports: [ProductComponent, PaginatorModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
