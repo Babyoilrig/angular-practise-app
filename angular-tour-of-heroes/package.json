@@ -6,7 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "postinstall": "find ./node_modules/primeng/fesm2022 -type f -name \"*.mjs\" -exec sed -i 's/, i0\\.ɵɵStandaloneFeature],/],/g' {} +"
+
   },
   "private": true,
   "dependencies": {
