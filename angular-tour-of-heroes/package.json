@@ -8,7 +8,6 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "postinstall": "find ./node_modules/primeng/fesm2022 -type f -name \"*.mjs\" -exec sed -i 's/, i0\\.ɵɵStandaloneFeature],/],/g' {} +"
-
   },
   "private": true,
   "dependencies": {
@@ -21,7 +20,9 @@
     "@angular/platform-browser-dynamic": "^19.0.0",
     "@angular/router": "^19.0.0",
     "@primeng/themes": "^18.0.0",
-    "primeng": "^18.0.0",
+    "i": "^0.3.7",
+    "npm": "^10.9.2",
+    "primeng": "^19.0.0-rc.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
