@@ -62,7 +62,7 @@ fetchProducts (page: number, perPage: number) {
     );
   }
 
-  deleteProduct(product: Product, id: number) {
+  deleteProduct(id: number) {
     this.productsService.deleteProduct(`http://localhost:3000/clothes/${id}`).subscribe(
       {
         next: (data) => {
