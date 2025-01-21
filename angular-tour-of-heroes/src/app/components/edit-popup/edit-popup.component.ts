@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { DialogModule } from 'primeng/dialog';
 import { Product } from '../../../types';
 
 @Component({
   selector: 'app-edit-popup',
-  imports: [DialogModule, CommonModule],
+  imports: [DialogModule, CommonModule, FormsModule],
   templateUrl: './edit-popup.component.html',
   styleUrl: './edit-popup.component.scss'
 })
