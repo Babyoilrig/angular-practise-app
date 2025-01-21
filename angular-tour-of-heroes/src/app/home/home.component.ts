@@ -61,8 +61,17 @@ fetchProducts (page: number, perPage: number) {
     );
   }
 
-  deleteProduct(product: Product) {
-    console.log(product, 'Delete');
+  deleteProduct(product: Product, id: number) {
+    this.productsService.deleteProduct(`http://localhost:3000/clothes/${id}`).subscribe(
+      {
+        next: (data) => {
+          console.log(data);
+          },
+        error: (error) => {
+          console.log(error);
+        }
+      }
+    );
   }
 
   addProduct(product: Product) {
