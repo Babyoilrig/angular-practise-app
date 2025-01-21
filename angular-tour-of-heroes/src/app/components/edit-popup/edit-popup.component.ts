@@ -3,6 +3,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { DialogModule } from 'primeng/dialog';
 import { Product } from '../../../types';
+import { Rating } from 'primeng/rating';
 
 @Component({
   selector: 'app-edit-popup',
