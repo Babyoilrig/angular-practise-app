@@ -53,6 +53,7 @@ fetchProducts (page: number, perPage: number) {
       {
         next: (data) => {
           console.log(data);
+          this.fetchProducts(0, this.rows);
           },
         error: (error) => {
           console.log(error);
@@ -66,6 +67,7 @@ fetchProducts (page: number, perPage: number) {
       {
         next: (data) => {
           console.log(data);
+          this.fetchProducts(0, this.rows);
           },
         error: (error) => {
           console.log(error);
@@ -75,7 +77,17 @@ fetchProducts (page: number, perPage: number) {
   }
 
   addProduct(product: Product) {
-    console.log(product, 'Add');
+    this.productsService.addProduct(`http://localhost:3000/clothes/`, product).subscribe(
+      {
+        next: (data) => {
+          console.log(data);
+          this.fetchProducts(0, this.rows);
+          },
+        error: (error) => {
+          console.log(error);
+        }
+      }
+    );
   }
 
   ngOnInit() {
