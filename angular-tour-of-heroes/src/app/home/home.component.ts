@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { PaginatorModule } from 'primeng/paginator';
 
 
+
 @Component({
   selector: 'app-home',
   imports: [ProductComponent, PaginatorModule, CommonModule ],
@@ -40,8 +41,19 @@ fetchProducts (page: number, perPage: number) {
     });
   }
 
-  editProduct(product: Product) {
-    console.log(product, 'Edit');
+  editProduct(product: Product, id: number) {
+    //here splitting response into 2 setions - one for success
+    //one for errors
+    this.productsService.editProduct(`http://localhost:3000/clothes/${id}`, product).subscribe(
+      {
+        next: (data) => {
+          console.log(data);
+          },
+        error: (error) => {
+          console.log(error);
+        }
+      }
+    );
   }
 
   deleteProduct(product: Product) {
