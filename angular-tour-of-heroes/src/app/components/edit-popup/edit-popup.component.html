@@ -8,23 +8,24 @@
     <!-- Name -->
         <div class="row gap-05">
             <span class="price-label">Name:</span>
-            <input type="text" [(ngModel)]="product.name" />
+            <input type="text" ngDefaultControl [(ngModel)]="product.name" />
         </div>
     </div>
-
+ 
     <!-- Price -->
         <div class="row gap-05">
             <span class="price-label">Price:</span>
-            <input type="text" [(ngModel)]="product.price" />
+            <input type="text" ngDefaultControl [(ngModel)]="product.price" />
         </div>
     <!-- Image -->
     <div class="row gap-05">
         <span class="price-label">Image:</span>
-        <input type="text" [(ngModel)]="product.image" />
+        <input type="text" ngDefaultControl [(ngModel)]="product.image" />
     </div>
 
     <!-- Rating -->
     <p-rating
+    ngDefaultControl
     [(ngModel)]="product.rating"
     iconOffClass="hidden"
     ></p-rating>

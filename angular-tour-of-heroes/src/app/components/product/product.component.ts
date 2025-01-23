@@ -8,10 +8,13 @@ import { ConfirmationService } from 'primeng/api';
 
 @Component({
   selector: 'app-product',
+  standalone: true,
   imports: [
     Rating, 
     FormsModule,
     ButtonModule,
+    ConfirmPopupModule
+    
   ],
   providers: [ConfirmationService],
   templateUrl: './product.component.html',
