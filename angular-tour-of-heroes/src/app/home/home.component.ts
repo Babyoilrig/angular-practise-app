@@ -33,6 +33,9 @@ toggleEditPopup(product: Product) {
   this.displayEditPopup = true;
 }
 
+toggleDeletePopup(roduct: Product) {
+}
+
 toggleAddPopup() {
   this.displayAddPopup = true;
 }
