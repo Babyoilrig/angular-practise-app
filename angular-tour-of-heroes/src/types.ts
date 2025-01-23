@@ -27,6 +27,8 @@ export interface Products {
 }
 
 export interface Product {
+    //Below was previously id? not :
+    id:  number;
     price: string;
     name: string;
     image: string;

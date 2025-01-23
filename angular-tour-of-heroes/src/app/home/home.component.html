@@ -15,4 +15,18 @@
     ></p-paginator>
 
 </div>
-<!-- https://www.youtube.com/watch?v=f7BJFTEbc10&t=3178s Link to course--> 
+
+<!-- Edit Product -->
+<app-edit-popup 
+[product]="selectedProduct" 
+[display]="displayEditPopup" 
+(confirm)="onConfirmEdit($event)";
+header="Edit Product">
+</app-edit-popup>
+
+<!-- Add Product -->
+<app-edit-popup 
+[display]="displayAddPopup" 
+(confirm)="onConfirmAdd($event)";
+header="Add Product">
+</app-edit-popup>

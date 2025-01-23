@@ -13,14 +13,17 @@ import { Rating } from 'primeng/rating';
 })
 export class EditPopupComponent {
   @Input() display: boolean = false;
-  @Output() confirm = new EventEmitter<Product>();
-  
+  @Input() header: string;
+
   @Input() product: Product = {
+    id: 0,
     name: '',
     image: '',
     price: '',
     rating: 0,
   };
+
+  @Output() confirm = new EventEmitter<Product>();
 
   onConfirm() {
     this.confirm.emit(this.product);
