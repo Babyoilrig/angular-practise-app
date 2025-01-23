@@ -2,12 +2,14 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Product } from '../../../types';
 import { Rating } from 'primeng/rating';
 import { FormsModule } from '@angular/forms';
+import { ButtonModule } from 'primeng/button';
 
 @Component({
   selector: 'app-product',
   imports: [
     Rating, 
-    FormsModule
+    FormsModule,
+    ButtonModule,
   ],
   templateUrl: './product.component.html',
   styleUrl: './product.component.scss'
