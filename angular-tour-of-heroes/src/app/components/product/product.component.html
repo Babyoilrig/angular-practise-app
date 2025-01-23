@@ -12,5 +12,23 @@
     [(ngModel)]="product.rating" 
     [readonly]="true"
     iconOffClass="hidden"
-    />
+    ></p-rating>
+
+    <!-- Action buttons -->
+    <div class="row">
+        <button
+      type="button"
+      pButton
+      icon="pi pi-pencil"
+      (click)="toggleEditPopup()"
+      label="Edit"
+    ></button>
+    <button
+      type="button"
+      pButton
+      icon="pi pi-trash"
+      (click)="toggleDeletePopup()"
+      label="Delete"
+    ></button>
+    </div>
 </div>
