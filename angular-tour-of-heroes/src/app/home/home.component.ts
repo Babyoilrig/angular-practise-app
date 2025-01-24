@@ -38,7 +38,11 @@ toggleEditPopup(product: Product) {
   this.displayEditPopup = true;
 }
 
-toggleDeletePopup(roduct: Product) {
+toggleDeletePopup(product: Product) {
+  if (!product.id) {
+    return
+  }
+  this.deleteProduct(product.id);
 }
 
 toggleAddPopup() {
