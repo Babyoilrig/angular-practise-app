@@ -4,16 +4,16 @@
 [modal]="true" 
 [closable]="false">
  
-    <div class="column gap-1 main-div">
+    <div class="column gap-1">
     <!-- Name -->
-        <div class="row gap-05">
+        <div class="row gap-05 popup-name">
             <span class="price-label">Name:</span>
             <input type="text" [(ngModel)]="product.name" />
         </div>
     </div>
  
     <!-- Price -->
-        <div class="row gap-05">
+        <div class="row gap-1">
             <span class="price-label">Price:</span>
             <input type="text" [(ngModel)]="product.price" />
         </div>
@@ -24,7 +24,7 @@
     </div>
 
     <!-- Rating -->
-    <p-rating
+    <p-rating class="row gap-05 popup-rating"
     [(ngModel)]="product.rating" 
     [readonly]="true"
     ></p-rating>
