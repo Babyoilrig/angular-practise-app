@@ -11,6 +11,7 @@ import { ButtonModule } from 'primeng/button';
 @Component({
   selector: 'app-edit-popup',
   imports: [
+    Rating,
     DialogModule, 
     CommonModule, 
     FormsModule,

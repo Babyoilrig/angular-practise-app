@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
 import { ConfirmationService } from 'primeng/api';
 
+
 @Component({
   selector: 'app-product',
   standalone: true,
@@ -13,7 +14,7 @@ import { ConfirmationService } from 'primeng/api';
     Rating, 
     FormsModule,
     ButtonModule,
-    ConfirmPopupModule
+    ConfirmPopupModule,
     
   ],
   providers: [ConfirmationService],
