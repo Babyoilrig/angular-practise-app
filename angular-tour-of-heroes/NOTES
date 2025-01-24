@@ -3,3 +3,5 @@ Clear cache: ng cache clean
 Issue to sort the function is not fn bug: https://github.com/primefaces/primeng/issues/16827
 
 Command: find ./node_modules/primeng/fesm2022 -type f -name "*.mjs" -exec sed -i 's/, i0\.ɵɵStandaloneFeature],/],/g' {} +
+
+

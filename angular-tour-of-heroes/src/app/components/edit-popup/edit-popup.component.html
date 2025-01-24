@@ -1,39 +1,36 @@
-<p-dialog 
+<p-dialog class="dialog"
 [header]="header" 
 [(visible)]="display" 
 [modal]="true" 
 [closable]="false">
  
-    <div class="column gap-1">
+    <div class="column gap-1 main-div">
     <!-- Name -->
         <div class="row gap-05">
             <span class="price-label">Name:</span>
-            <input type="text" ngDefaultControl [(ngModel)]="product.name" />
+            <input type="text" [(ngModel)]="product.name" />
         </div>
     </div>
  
     <!-- Price -->
         <div class="row gap-05">
             <span class="price-label">Price:</span>
-            <input type="text" ngDefaultControl [(ngModel)]="product.price" />
+            <input type="text" [(ngModel)]="product.price" />
         </div>
     <!-- Image -->
     <div class="row gap-05">
         <span class="price-label">Image:</span>
-        <input type="text" ngDefaultControl [(ngModel)]="product.image" />
+        <input type="text" [(ngModel)]="product.image" />
     </div>
 
     <!-- Rating -->
     <p-rating
-    ngDefaultControl
     [(ngModel)]="product.rating"
-    iconOffClass="hidden"
     ></p-rating>
 
-   
-
-    <p-footer>
-        <button type="button" pButton icon="pi pi-check" (click)="onConfirm()" label="Confirm"></button>
-        <button type="button" pButton icon="pi pi-times" (click)="onCancel()" label="Cancel"></button>
-    </p-footer>
-</p-dialog>   
+    <div class="footer">
+    <button type="button" pButton icon="pi pi-check" (click)="onConfirm()" label="Confirm"></button>
+    <button type="button" pButton icon="pi pi-times" (click)="onCancel()" label="Cancel"></button>
+    </div>
+    
+</p-dialog>  
